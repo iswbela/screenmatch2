@@ -11,8 +11,8 @@ import br.com.alura.screenmatch.service.ConverteDados;
 
 public class Principal {
 
-    private Scanner leitura = new Scanner(System.in);
-    private ConsumoApi consumo = new ConsumoApi();
+    private final Scanner leitura = new Scanner(System.in);
+    private final ConsumoApi consumo = new ConsumoApi();
 
     ConverteDados conversor = new ConverteDados();
 
@@ -35,6 +35,6 @@ public class Principal {
             temporadas.add(dadosTemporada);
             
             }
-            temporadas.forEach(System.out::println);
+            temporadas.forEach(t -> t.episodios().forEach(e -> System.out.println(e.titulo())) );
     }
 }
