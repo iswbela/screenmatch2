@@ -7,6 +7,14 @@ public class Episodio {
     private Integer temporada;
     private String titulo;
     private Integer numeroEpisodio;
+    public Integer getTemporada() {
+        return temporada;
+    }
+
+    public void setTemporada(Integer temporada) {
+        this.temporada = temporada;
+    }
+
     private Double avaliacao;
     private LocalDate dataLancamento;
 
@@ -58,7 +66,6 @@ public class Episodio {
     public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
